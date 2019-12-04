@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br>
+<div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 position-static p-4 pl-md-0 ml-3">
+        <h5 class="mt-0">Data Preprocessing</h5>
+        <p>overview of the dataset target, the'Rating' and 'Recommended IND'</p>
+        <a href="/plots" class="stretched-link">Detail</a>
+    </div>
+    <div class="col-md-6 position-static p-4 pl-md-0 ml-3">
+        <h5 class="mt-0">Data Modelling</h5>
+        <p>Using the classification model, the two target is using 3 balanced samples and 4 models </p>
+        <a href="/plots2" class="stretched-link">Detail</a>
+    </div>
+</div>
+<div class="col-md-12 position-static p-4 pl-md-0 ml-3">
+    <h5 class="mt-0">Result</h5>
+    <p>the result of the data</p>
+    <a href="/plots3" class="stretched-link">Detail</a>
+</div>
+{% endblock body %}

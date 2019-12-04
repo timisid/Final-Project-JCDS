@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br><br>
+    <div class='row ml-3'>
+        <div class='col md-6'>
+            <img src="{{url_for('static',filename='recommend.jpg')}}" alt="..." class="img-thumbnail mt-3">
+        </div>  
+        <div class='col md-6'>
+            <br><br>
+            <b>Modelling Recommended IND</b>
+            <p>the feature is age, rating, positive feedback count, division name, department name, class name</p>
+            <p>Logistic Regression is the most stable between precision and recall</p><br>
+            <div><a href="/plots3" class="stretched-link">Result</a></div>
+        </div> 
+    </div><br><br><br><br>
+    <div class='row mr-3'>
+        <div class='col md-6'>
+            <br><br>
+            <b>Modelling Sentiment Review</b>
+            <p>the feature is 'Review' that has been cleaned and filter by stopwords</p>
+            <p>Logistic Regression is the most stable between precision and recall</p><br>
+        </div> 
+        <div class='col md-6'>
+            <img src="{{url_for('static',filename='sentiment.jpg')}}" alt="..." class="img-thumbnail mt-3">
+        </div>  
+    </div>
+{% endblock body %}

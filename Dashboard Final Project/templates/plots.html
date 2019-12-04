@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <br>
+    <div class="row">
+        <div class="col-md-8 row ml-3 mr-3">
+            <h4>Target</h4>
+            <p><b>first 'Recommended IND': </b>i want to predict wether the customer would recommend the product or not based on the given fetures in the dataset</p><br>
+            <p><b>second 'Sentiment':</b> the raw dataset (before processing) 'Rating' feature are mostly voted 5 by customer. 
+                5 is the best score and it means that the customers in this dataset 
+                were (assumed) are satisfied or loved the product (as it seems by the plots). 
+                the 'Rating' is used to detect and predict sentiment review using <i>Natural Languange Processing</i></p>
+            <p>the data is imbalanced, which if we predict they tend to be 'Best' or would be 'Recommended' </p>
+            <br><div><a href="/summary" class="stretched-link">Back to summary</a></div>
+            <br><div><a href="/plots2" class="stretched-link">Next</a></div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="chart" id="count-type1"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="chart" id="count-type2"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="chart" id="count-type3"></div>
+        </div>
+    </div>
+    <img src="{{url_for('static',filename='.jpg')}}" alt="..." class="img-thumbnail">
+    <div class="mt-3"></div>
+
+    <script>
+        Plotly.plot('count-type1' , {{data | safe}})
+        Plotly.plot('count-type2' , {{data2 | safe}})
+        Plotly.plot('count-type3' , {{data3 | safe}})
+    </script>
+
+{% endblock body %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<img src="https://pixidoo.com/pub/media/wysiwyg/slider/slider1.jpg" class="img-fluid" alt="Responsive image">
+    <div class="container pt-5">
+        <div style="position: absolute; top: 150px; left: 0px;" class="row justify-content-center">
+            <div class="col-md-6" style="width: 900px;">
+                <h4>What customer think about the product?</h4>
+                <p>give some example review and thoughts below</p>
+                <form action="/predict2" method="POST">
+                    <input type="Clean Review" name="Clean Review" placeholder="How our product was?" class="form-control mt-3">
+                    <button type="submit" class="btn btn-danger btn-lg btn-block mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

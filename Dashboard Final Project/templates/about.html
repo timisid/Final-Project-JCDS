@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<img src="{{url_for('static',filename='about.jpg')}}" class="img-fluid" alt="Responsive image">
+<div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">    
+        </div>
+        <div class="card-group">
+            <div class="card">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <div class="card-body">
+                <h1>About the datasets</h1><br>
+                <h3 class="card-title">Source</h3>
+                <p class="card-text">This is a Women’s Clothing E-Commerce dataset revolving around the reviews written by customers. Its nine supportive features offer a great environment to parse out the text through its multiple dimensions. Because this is real commercial data, it has been anonymized, and references to the company in the review text and body have been replaced with “retailer”. This dataset includes 23486 rows and 10 feature variables. Each row corresponds to a customer review, and includes the variables</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <div class="card-body">
+                <h3 class="card-title">Features:</h3><br>
+                <p class="card-text"> 
+                <dl class="row">
+                    <dt class="col-sm-3">Clothing ID:</dt>
+                    <dd class="col-sm-9">Integer Categorical variable that refers to the specific piece being reviewed.</dd>
+                    
+                    <dt class="col-sm-3">Age:</dt>
+                    <dd class="col-sm-9">Positive Integer variable of the reviewers age</dd>
+                    
+                    <dt class="col-sm-3">Title:</dt>
+                    <dd class="col-sm-9">String variable for the title of the review</dd>
+                    
+                    <dt class="col-sm-3 text-truncate">Review Text:</dt>
+                    <dd class="col-sm-9">String variable for the review body</dd>
+
+                    <dt class="col-sm-3">Rating:</dt>
+                    <dd class="col-sm-9">Positive Ordinal Integer variable for the product score granted by the customer from 1 Worst, to 5 Best</dd>
+                    
+                    <dt class="col-sm-3">Recommended IND: </dt>
+                    <dd class="col-sm-9">Binary variable stating where the customer recommends the product where 1 is recommended, 0 is not recommended</dd>
+                    
+                    <dt class="col-sm-3">Feedback Count:</dt>
+                    <dd class="col-sm-9">Positive Integer documenting the number of other customers who found this review positive</dd>
+                    
+                    <dt class="col-sm-3 text-truncate">Div. Name:</dt>
+                    <dd class="col-sm-9">Categorical name of the product high level division</dd><br>   
+
+                    <dt class="col-sm-3 text-truncate">Dep. Name:</dt>
+                    <dd class="col-sm-9">Categorical name of the product department name</dd>
+
+                    <dt class="col-sm-3 text-truncate">Class Name:</dt>
+                    <dd class="col-sm-9">Categorical name of the product class name</dd>
+                </dl></p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+{% endblock body %}

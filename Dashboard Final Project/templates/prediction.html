@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<img src="https://www.lovemodestfashion.com/image/cache/catalog/banner-new-1-1920x600.jpg" class="img-fluid" alt="Responsive image">
+<div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h4>PREDICT CUSTOMER SATISFACTION</h4>
+                <p>Let's simulate how customer can recommend our product based on the review below</p>
+                <form action="/prediction" method="POST">
+                    <input type="Age" max="99" name="Age" placeholder="Enter Age" class="form-control mt-3">
+                    <select class="form-control mt-3" name="Rating" id="">
+                        <option value="" disabled selected>Rating</option>
+                        <option value="1">1 - Worst</option>
+                        <option value="2">2 - Poor</option>
+                        <option value="3">3 - Average</option>
+                        <option value="4">4 - Good</option>
+                        <option value="5">5 - Best</option>
+                    </select>
+                    <input type="Positive Feedback Count" max="100" name="Positive Feedback Count" placeholder="How many customer that might like your review" class="form-control mt-3">
+                    <select class="form-control mt-3" name="Division_Name" id="">
+                        <option value="" disabled selected>Select Division_Name</option>
+                        <option value="Initmates">Intimates</option>
+                        <option value="General">General</option>
+                        <option value="General_Petite">General_Petite</option>
+                    </select>
+                    <select class="form-control mt-3" name="Department_Name" id="">
+                        <option value="" disabled selected>Select Department_Name</option>
+                        {% for item in data_department %}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <select class="form-control mt-3" name="Class_Name" id="">
+                        <option value="" disabled selected>Select Class_Name</option>
+                        {% for item in data_class %}s
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <div>
+                        <button type="submit" class="btn btn-danger btn-lg btn-block mt-3">Predict</button>
+                    </div>
+                    <div class="mt-4"></div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

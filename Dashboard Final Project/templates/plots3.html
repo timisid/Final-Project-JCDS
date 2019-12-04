@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br><br>
+    <div class='row ml-3'>
+        <div class='col md-10'>
+            <img src="{{url_for('static',filename='.jpg')}}" alt="..." class="img-thumbnail mt-3">
+        </div>  
+        <div class='col md-6'>
+            <br><br>
+            <b>Recommended IND</b>
+            <p>the coefficient of Rating has the biggest impact if the customer would recommend the product or not. while the rest is not significant to the target</p>
+            <p>Logistic Regression is the most stable between precision and recall</p><br>
+            <div><a href="/summary" class="stretched-link">Back to Summary</a></div>
+        </div> 
+    </div><br><br><br><br>
+    <div class='row mr-3'>
+        <div class='col md-6'>
+            <br><br>
+            <b>Sentiment Review</b>
+            <p>the feature is 'Review' that has been cleaned and filter by stopwords</p>
+            <p>Logistic Regression is the most stable between precision and recall</p><br>
+        </div> 
+        <div class='col md-6'>
+            <p>Most words appears by 'Best'</p>
+            <img src="{{url_for('static',filename='best.jpg')}}" alt="..." class="img-thumbnail mt-3">
+        </div>  
+    </div>
+{% endblock body %}

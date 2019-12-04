@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- <img src= class="img-fluid" alt="Responsive image"> -->
+<img src="{{url_for('static',filename='result.jpg')}}" alt="..." class="img-thumbnail">
+    <div class="container pt-5">
+        <div style="position: absolute; top: 150px; right: 0px;" class="row justify-content-center">
+            <div class="col-md-6" style="width: 1000px;">
+                <h5>{{hasil_pred2}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
