@@ -26,7 +26,7 @@ based on the data source i want to make 2 prediction of classification
 ### 1. Data Extraction, Data Cleaning and Exploratory Data Analysis (EDA)
 extract the data : read the data source, seeing the data type, decribe the data source and counting the unique value since i want to predict in classification
 
-IMAGE 
+![gambar2](https://github.com/timisid/Final-Project-JCDS/blob/master/Dashboard%20Final%20Project/static/1.Data Extraction.JPG)
 
 cleaning data : dropping and filling based on missing value percentage. if the data have significant value and information or have more than 40% missing value i'll try to fill it. but if the value are not significant, choose to drop it. also detect the outlier to find the normal distribution of the data and drop the anomalies
 
