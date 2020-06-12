@@ -68,9 +68,25 @@ based on the heatmap the top 3 that affected between features is 'Recommendation
 
 based on the graph, the recommended from the dataset is dominant and the not recommended is between 17%. it's imbalance and the target needs to be balance using 3 different ways.
 
-![gambar9](https://github.com/timisid/Final-Project-JCDS/blob/master/Dashboard%20Final%20Project/static/3.EDA_5.JPG)
+![gambar10](https://github.com/timisid/Final-Project-JCDS/blob/master/Dashboard%20Final%20Project/static/3.EDA_5.JPG)
 
-### 2. 
+### 2. Processing Goals 1 : Customer Recommendation
+>Feature Engineering
+make dummies for the features
+
+IMAGE
+
+>Standard Scaler
+to get a good range between the data, we need to transform it into numerical range by doing standard scaler
+
+IMAGE
+
+>Handling Imbalance and Modelling
+-using sci-kit learn libraries to handling imbalance. using all those 3 methods (Undersampling, Random Over Sampling, SMOTE) to get the best score. and mix it with modelling methods.
+-for the modelling i'm using train test split with random state and try all classification models such Logistic Regression, Decision Tree, Random Forest, and Gradient Boosting with recall and precision values
+-also the accuracy score for the 3 handling imbalance methods
+
+IMAGE
 
 
 
